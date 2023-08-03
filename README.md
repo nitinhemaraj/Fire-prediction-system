@@ -7,21 +7,21 @@ The primary goal of this project is not to predict whether a forest fire will oc
 
 The project follows the following steps:
 
-Data Collection: The dataset, called "fire_archive.csv," is imported, which contains records of past forest fire incidents along with relevant attributes.
+* Data Collection: The dataset, called "fire_archive.csv," is imported, which contains records of past forest fire incidents along with relevant attributes.
 
-Data Exploration and Cleaning: The dataset is explored to understand its structure and check for any missing or irrelevant data. Necessary data cleaning and preprocessing techniques are applied to ensure the data's quality and usefulness for model training.
+* Data Exploration and Cleaning: The dataset is explored to understand its structure and check for any missing or irrelevant data. Necessary data cleaning and preprocessing techniques are applied to ensure the data's quality and usefulness for model training.
 
-Feature Engineering: The data is transformed to make it suitable for machine learning models. Categorical variables like "daynight" and "satellite" are converted into numerical form using mapping techniques. The "scan" column is binned to create a categorical variable.
+* Feature Engineering: The data is transformed to make it suitable for machine learning models. Categorical variables like "daynight" and "satellite" are converted into numerical form using mapping techniques. The "scan" column is binned to create a categorical variable.
 
-Data Visualization: Correlation heatmaps are generated to understand the relationships between variables and identify important features that might affect forest fire confidence.
+* Data Visualization: Correlation heatmaps are generated to understand the relationships between variables and identify important features that might affect forest fire confidence.
 
-Model Development: A RandomForestRegressor model is chosen for this prediction task. The dataset is divided into training and testing sets, and the model is trained using the training data.
+* Model Development: A RandomForestRegressor model is chosen for this prediction task. The dataset is divided into training and testing sets, and the model is trained using the training data.
 
-Model Tuning: The initial model's performance is evaluated, and hyperparameter tuning is performed using RandomizedSearchCV to find the optimal hyperparameters that improve the model's accuracy and reduce overfitting.
+* Model Tuning: The initial model's performance is evaluated, and hyperparameter tuning is performed using RandomizedSearchCV to find the optimal hyperparameters that improve the model's accuracy and reduce overfitting.
 
-Model Evaluation: The final tuned model is evaluated using the test dataset to assess its accuracy in predicting the confidence level of forest fires.
+* Model Evaluation: The final tuned model is evaluated using the test dataset to assess its accuracy in predicting the confidence level of forest fires.
 
-Model Saving: The best-performing model is saved as a pickle file for later use.
+* Model Saving: The best-performing model is saved as a pickle file for later use.
 
 Bonus: To optimize the model storage, the pickle file is further compressed using the bz2 module, resulting in a smaller file size without sacrificing model performance.
 
